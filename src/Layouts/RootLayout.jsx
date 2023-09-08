@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
-import SideBar from "../Components/SideBar/SideBar";
+
+import Sidebar from "../Components/Shared/SideBar/SideBar";
+
 
 function RootLayout({ children }) {
   return (
     <div className="flex">
-      <SideBar />
+      <Sidebar />
       <main className="max-w-screen flex-1 mx-auto">{children}</main>
     </div>
   );

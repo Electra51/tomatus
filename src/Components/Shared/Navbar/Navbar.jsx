@@ -1,6 +1,6 @@
 
 import {IoIosNotificationsOutline} from "react-icons/io";
-import img from "../../assets/profile.png"
+import img from "../../../assets/profile.png"
 import { HiOutlineClipboardList } from "react-icons/hi";
 import { PiLockKeyOpen } from "react-icons/pi";
 import {AiOutlineLogout} from "react-icons/ai"

@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import RootLayout from "./Layouts/RootLayout";
-import HomePage from "./Pages/HomePage/HomePage";
-import Navbar from "./Components/Navbar/Navbar";
+
+import Dashboard from "./Pages/DashBoard/Dashboard";
+import Navbar from "./Components/Shared/Navbar/Navbar";
 
 const App = () => {
   return (
@@ -9,7 +10,7 @@ const App = () => {
       <Navbar/>
       <Routes>
         
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Dashboard />} />
         <Route path="/orderList" element={<>hi</>} />
         <Route path="/stroage" element={<>ji</>} />
         <Route path="/settings" element={<>ji</>} />

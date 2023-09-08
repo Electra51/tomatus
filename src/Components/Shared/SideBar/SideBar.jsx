@@ -12,7 +12,7 @@ import { PiLockKeyOpen } from "react-icons/pi";
 import { useMediaQuery } from "react-responsive";
 import { MdMenu, MdOutlineDriveFolderUpload, MdOutlineRestaurantMenu } from "react-icons/md";
 import { NavLink, useLocation,  } from "react-router-dom";
-import logo from "../../assets/Navlogo.png";
+import logo from "../../../assets/Navlogo.png";
 
 const Sidebar = () => {
 
@@ -106,7 +106,7 @@ const Sidebar = () => {
         <div className="flex flex-col h-full bg-componentColor">
           <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1  font-medium overflow-x-hidden scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-100 md:h-[77%] h-[70%]">
               {(open || isTabletMid) && (
-              <div className="mt-3">
+              <div className="mt-0">
                 <p className="text-TextColor inline-block mb-2">
                  MAIN
                 </p>
@@ -143,13 +143,13 @@ const Sidebar = () => {
               </NavLink>
             </li>
              <li>
-              <NavLink to={"/chef"} className="link">
+              <NavLink to={"/reviews"} className="link">
                 <SlBadge size={23} className="min-w-max" />
                 Customer Reviews
               </NavLink>
             </li>
              <li>
-              <NavLink to={"/chef"} className="link">
+              <NavLink to={"/uploadMenu"} className="link">
                 <MdOutlineDriveFolderUpload size={23} className="min-w-max" />
                 Upload Menu
               </NavLink>
@@ -164,13 +164,13 @@ const Sidebar = () => {
               </div>
             )}
             <li>
-              <NavLink to={"/settings"} className="link">
+              <NavLink to={"/login"} className="link">
                 <FaRegUserCircle size={23} className="min-w-max" />
                 Login
               </NavLink>
             </li>
               <li>
-              <NavLink to={"/settings"} className="link">
+              <NavLink to={"/lock"} className="link">
                 <PiLockKeyOpen size={23} className="min-w-max" />
                 Lock Screen
               </NavLink>
@@ -178,19 +178,15 @@ const Sidebar = () => {
             
           </ul>
           {open && (
-            
-              <div className="flex p-2 mt-5 items-center justify-between">
+             <div className="flex p-2 mt-5 items-center justify-between">
              <small className="text-NormalTextColor">© 2018 <span className="text-TextColor">Tomatus.</span> All Right Reserved</small>
-                
-              
-              </div>
-            
+             </div>
           )}
         </div>
-       
+       {/* for small screen */}
       </motion.div>
-      <div className="m-3 md:hidden " onClick={() => setOpen(true)}>
-        <MdMenu size={25} />
+      <div className=" md:hidden bg-componentColor px-2 pt-[20px] pb-[20px]" onClick={() => setOpen(true)}>
+        <MdMenu size={25} className="text-white" />
       </div>
     </div>
   );
