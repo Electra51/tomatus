@@ -1,4 +1,6 @@
+import ChartCard from "../../Components/UI/ChartCard"
 import CongratulationCard from "../../Components/UI/CongratulationCard"
+import CustomerFeed from "../../Components/UI/CustomerFeed"
 import StatisticCard from "../../Components/UI/StatisticCard"
 import './dashboard.css'
 const Dashboard = () => {
@@ -22,11 +24,21 @@ const Dashboard = () => {
     </div>
 
 
-    <div className="grid grid-cols-2 gap-5 mt-4 overflow-y-auto sml:h-[500px] mdl:h-[540px]">
+    
+    <div className="grid sml:grid-cols-1 mdl:grid-cols-2 gap-1 mt-4 overflow-y-auto h-[470px] sml:h-[683px] mdl:h-[540px]">
   <div className=""><CongratulationCard/>
-  <div className=" px-2 py-6 mx-3 text-white"> <p className="text-white">Statistic</p>
-  <StatisticCard/></div></div>
-  <div className="">02</div>
+  <div className=" px-2 py-6 mx-3 text-white"> 
+  <p className="text-white">Statistic</p>
+  <StatisticCard/></div>
+  </div>
+ <div className=""><ChartCard/>
+  <div className=" px-2 py-6 mx-3 text-white"> 
+  <div className="flex justify-between items-center">
+    <p className="text-white">Customer Feed</p>
+    <p>View all</p>
+  </div>
+  <CustomerFeed/></div>
+  </div>
   
 </div>
 </div>

@@ -68,9 +68,9 @@ const Sidebar = () => {
 
   const subMenusList = [
     {
-      name: "Menu Layout",
+      name: "MenuLayout",
       icon: TbBrandStorybook,
-      menus: ["Menu Layout -01", "Menu Layout -02", "Menu Layout -03"],
+      menus: ["MenuLayout-01", "MenuLayout-02", "MenuLayout-03"],
     }
   ];
 
@@ -124,6 +124,7 @@ const Sidebar = () => {
               <div className="">
                
                 {subMenusList?.map((menu) => (
+                 
                   <div key={menu.name} className="flex flex-col gap-1">
                     <SubMenu data={menu} />
                   </div>

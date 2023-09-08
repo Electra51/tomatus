@@ -10,7 +10,8 @@
   }
   body {
     background: #2B2E36;
-    overflow: hidden
+    overflow: hidden;
+    height: 100vh
   }
   h1 {
     @apply text-xl font-medium capitalize;

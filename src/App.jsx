@@ -3,6 +3,7 @@ import RootLayout from "./Layouts/RootLayout";
 
 import Dashboard from "./Pages/DashBoard/Dashboard";
 import Navbar from "./Components/Shared/Navbar/Navbar";
+import MenuLayout1 from "./Pages/MenuLayout1/MenuLayout1";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
         <Route path="/orderList" element={<>hi</>} />
         <Route path="/stroage" element={<>ji</>} />
         <Route path="/settings" element={<>ji</>} />
-        <Route path="/build/:bID" element={<>ki</>} />
+        <Route path="/menuLayout/:bID" element={<MenuLayout1/>} />
         <Route path="/analytics/:aID" element={<>jii</>} />
       </Routes>
     </RootLayout>
