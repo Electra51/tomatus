@@ -1,13 +1,22 @@
-import "./App.css";
-import { RouterProvider } from "react-router-dom";
-import router from "./Routes/Routes";
-
+import { Route, Routes } from "react-router-dom";
+import RootLayout from "./Layouts/RootLayout";
+import HomePage from "./Pages/HomePage/HomePage";
+import Navbar from "./Components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <div className="app">
-      <RouterProvider router={router} />
-    </div>
+    <RootLayout>
+      <Navbar/>
+      <Routes>
+        
+        <Route path="/" element={<HomePage />} />
+        <Route path="/orderList" element={<>hi</>} />
+        <Route path="/stroage" element={<>ji</>} />
+        <Route path="/settings" element={<>ji</>} />
+        <Route path="/build/:bID" element={<>ki</>} />
+        <Route path="/analytics/:aID" element={<>jii</>} />
+      </Routes>
+    </RootLayout>
   );
 };
 

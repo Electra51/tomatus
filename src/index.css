@@ -1,3 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Play:wght@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-Montserrat;
+  }
+  body {
+    background: #2B2E36;
+    overflow: hidden
+  }
+  h1 {
+    @apply text-xl font-medium capitalize;
+  }
+}
+
+.link {
+  @apply p-2.5 flex rounded-none hover:bg-[#2B2E36] text-[#8CB8C4] hover:text-[#F16262] border-l-4 border-transparent hover:border-[#F16262] gap-6 items-center md:cursor-pointer cursor-default duration-300 font-medium no-underline;
+}
+
+.active {
+  @apply bg-[#2B2E36] text-[#F16262] border-l-4 border-transparent border-[#F16262];
+}
